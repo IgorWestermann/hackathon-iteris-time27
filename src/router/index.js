@@ -5,6 +5,7 @@ import ProductsPage from '../views/ProductsPage.vue';
 import SellerLoginPage from '../views/SellerLoginPage';
 import VendorRegisterPage from '../views/VendorRegisterPage.vue';
 import RegisterSucessPage from '../views/RegisterSucessPage.vue';
+import NewProductPage from '../views/NewProductPage.vue';
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/vendedor',
     name: 'SellerLoginPage',
     component: SellerLoginPage,
+  },
+  {
+    path: '/newproduct',
+    name: 'NewProductPage',
+    component: NewProductPage,
   },
 ];
 
