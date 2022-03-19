@@ -1,5 +1,6 @@
 <template>
   <v-container class="login-page">
+    <AppBar />
     <div class="login">
       <h2 class="ml-2">Login</h2>
       <v-form ref="form" v-model="valid" lazy-validation>
@@ -10,17 +11,33 @@
           label="E-mail"
         >
         </v-text-field>
-        <v-text-field class="ml-2 mr-2" 
+        <v-text-field
+          class="ml-2 mr-2"
           type="password"
           label="Senha"
         ></v-text-field>
 
         <router-link to="/newproduct">
-          <v-btn rounded color="deep-purple lighten-2" class="mr-4 ml-2" dark @click="validate"> Login </v-btn>
+          <v-btn
+            rounded
+            color="deep-purple lighten-2"
+            class="mr-4 ml-2"
+            dark
+            @click="validate"
+          >
+            Login
+          </v-btn>
         </router-link>
 
         <router-link to="/registervendor">
-          <v-btn rounded color="deep-purple lighten-2" dark @click="resetValidation"> Cadastre-se </v-btn>
+          <v-btn
+            rounded
+            color="deep-purple lighten-2"
+            dark
+            @click="resetValidation"
+          >
+            Cadastre-se
+          </v-btn>
         </router-link>
       </v-form>
 
@@ -34,8 +51,11 @@
 </template>
 
 <script>
+import AppBar from '../components/AppBar.vue';
+
 export default {
   name: 'SellerLoginPage',
+  components: { AppBar },
 };
 </script>
 
