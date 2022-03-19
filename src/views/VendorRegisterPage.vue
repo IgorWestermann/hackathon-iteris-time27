@@ -37,11 +37,18 @@
       ></v-text-field>
 
       <div class="register-page-btns">
-        <v-btn rounded color="deep-purple lighten-2" dark> Cadastrar </v-btn>
+        <router-link to="/registersucess">
+          <v-btn rounded color="deep-purple lighten-2" dark>
+            Cadastrar
+          </v-btn></router-link
+        >
         <v-btn rounded color="deep-purple lighten-2" @click="reset" dark>
           Limpar
         </v-btn>
-        <v-btn rounded color="deep-purple lighten-2" dark> Cancelar </v-btn>
+
+        <router-link to="/">
+          <v-btn rounded color="deep-purple lighten-2" dark> Cancelar </v-btn>
+        </router-link>
       </div>
     </v-form>
   </v-container>
@@ -72,5 +79,9 @@ export default {
 .register-page-btns {
   display: flex;
   justify-content: space-around;
+}
+
+.register-page-btns a {
+  text-decoration: none;
 }
 </style>
