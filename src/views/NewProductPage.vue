@@ -1,5 +1,6 @@
 <template>
     <v-container>
+      <AppBar />
         <div class="novo-produto">
             <h2 color="deep-purple lighten-2" class="mb-5">Novo Produto</h2>
             <v-form
@@ -63,6 +64,8 @@
 </template>
 
 <script>
+import AppBar from '../components/AppBar.vue'
+
 export default {
     name: 'NewProductPage',
    data: () => ({
@@ -103,6 +106,7 @@ export default {
           }
         }
       });
-    }
+    },
+    components: { AppBar },
   }
 </script>

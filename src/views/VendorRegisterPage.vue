@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card elevation="2" class="pa-8 mt-16">
+    <v-card elevation="2" class="pa-8 mt-6">
       <h1 class="text-center page-title mb-6">Cadastrar Estabelecimento</h1>
       <v-form class="registro-box" ref="form">
         <v-text-field
