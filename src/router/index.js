@@ -1,8 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomePage from '../views/HomePage.vue'
-import ProductsPage from '../views/ProductsPage.vue'
-import SellerLoginPage from '../views/SellerLoginPage'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import HomePage from '../views/HomePage.vue';
+import ProductsPage from '../views/ProductsPage.vue';
+import SellerLoginPage from '../views/SellerLoginPage';
+import VendorRegisterPage from '../views/VendorRegisterPage.vue';
+import RegisterSucessPage from '../views/RegisterSucessPage.vue';
 
 Vue.use(VueRouter);
 
@@ -15,14 +17,24 @@ const routes = [
   {
     path: '/produtos',
     name: 'ProductsPage',
-    component: ProductsPage
+    component: ProductsPage,
   },
-   {
-     path: '/vendedor',
-     name: 'SellerLoginPage',
-     component: SellerLoginPage
-   },
-]
+  {
+    path: '/registervendor',
+    name: 'VendorRegisterPage',
+    component: VendorRegisterPage,
+  },
+  {
+    path: '/registersucess',
+    name: 'RegisterSucessPage',
+    component: RegisterSucessPage,
+  },
+  {
+    path: '/vendedor',
+    name: 'SellerLoginPage',
+    component: SellerLoginPage,
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',

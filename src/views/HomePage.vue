@@ -1,17 +1,19 @@
 <template>
   <v-container>
-    <h2 class="text-center mb-6">Olá, seja bem-vindo!</h2>
+    <h2 class="text-center mb-6 page-title">Olá, seja bem-vindo!</h2>
 
     <div class="home-img mb-6">
       <img class="home-img" src="../../src/assets/home-img.webp" alt="" />
     </div>
 
-    <h3 class="text-center mb-6">Escolha uma opção:</h3>
+    <h3 class="text-center mb-6 page-title">Escolha uma opção:</h3>
 
     <div class="text-center home-buttons">
-      <v-btn rounded color="primary" dark> Sou cliente </v-btn>
+      <router-link to="/produtos">
+        <v-btn rounded color="deep-purple lighten-2" dark> Sou cliente </v-btn>
+      </router-link>
       <router-link to="/vendedor">
-        <v-btn rounded color="primary" dark> Sou revendedor </v-btn>
+        <v-btn rounded color="deep-purple lighten-2" dark> Sou vendedor </v-btn>
       </router-link>
     </div>
   </v-container>
@@ -29,10 +31,12 @@ export default {
   justify-content: space-around;
 }
 
+.home-buttons a {
+  text-decoration: none;
+}
+
 .home-img {
   width: 100%;
   border-radius: 60px;
 }
-
-
 </style>
