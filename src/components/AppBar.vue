@@ -1,6 +1,6 @@
 <template>
   <v-container class="app-bar">
-    <v-bottom-navigation v-model="value" fixed app color="#52E4D5">
+    <v-bottom-navigation v-model="value" fixed app>
       <router-link to="/produtos">
         <v-btn value="recent">
         <span>Clientes</span>
@@ -29,5 +29,6 @@ export default {
 <style scoped>
 .app-bar a{
   text-decoration: none;
+  color: #9575CD;
 }
 </style>
