@@ -1,8 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomePage from '../views/HomePage.vue'
-import ProductsPage from '../views/ProductsPage.vue'
-import NewProductPage from '../views/NewProductPage.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import HomePage from '../views/HomePage.vue';
+import ProductsPage from '../views/ProductsPage.vue';
+import SellerLoginPage from '../views/SellerLoginPage';
+import VendorRegisterPage from '../views/VendorRegisterPage.vue';
+import RegisterSucessPage from '../views/RegisterSucessPage.vue';
+import NewProductPage from '../views/NewProductPage.vue';
 
 Vue.use(VueRouter);
 
@@ -15,19 +18,29 @@ const routes = [
   {
     path: '/produtos',
     name: 'ProductsPage',
-    component: ProductsPage
+    component: ProductsPage,
   },
   {
-    path: '/NewProductPage',
-    name: 'NewProductPage',
-    component: NewProductPage
+    path: '/registervendor',
+    name: 'VendorRegisterPage',
+    component: VendorRegisterPage,
   },
-  // {
-  //   path: '/',
-  //   name: 'VendedorView',
-  //   component: HomePage
-  // },
-]
+  {
+    path: '/registersucess',
+    name: 'RegisterSucessPage',
+    component: RegisterSucessPage,
+  },
+  {
+    path: '/vendedor',
+    name: 'SellerLoginPage',
+    component: SellerLoginPage,
+  },
+  {
+    path: '/newproduct',
+    name: 'NewProductPage',
+    component: NewProductPage,
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',

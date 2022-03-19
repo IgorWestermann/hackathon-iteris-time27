@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <div class="novo-produto">
-            <h2 class="mb-5">Novo Produto</h2>
+            <h2 color="deep-purple lighten-2" class="mb-5">Novo Produto</h2>
             <v-form
                 ref="form"
                 v-model="valid"
@@ -16,24 +16,20 @@
 
             <p class="mb-2 mt-6">Local:</p>
                 <v-text-field
-                v-model="name"
-                :counter="10"
-                :rules="nameRules"
+                :rules="Rules"
                 label="Nome do Estabelecimento"
                 required
                 ></v-text-field>
 
                 <v-text-field
-                v-model="email"
-                :rules="emailRules"
+                :rules="Rules"
                 label="CEP"
                 required
                 ></v-text-field>
 
                 
                 <v-text-field
-                v-model="email"
-                :rules="emailRules"
+                :rules="Rules"
                 label="Endereço"
                 required
                 ></v-text-field>
@@ -41,43 +37,25 @@
                 <p class="mb-2 mt-6">Produto:</p>
 
                 <v-text-field
-                v-model="email"
-                :rules="emailRules"
+                :rules="Rules"
                 label="Nome do Produto"
                 required
                 ></v-text-field>
                 
                 <v-text-field
-                v-model="email"
-                :rules="emailRules"
+                :rules="Rules"
                 label="Preço"
                 required
                 ></v-text-field>
 
                 
                 <v-text-field
-                v-model="email"
-                :rules="emailRules"
+                :rules="Rules"
                 label="Sabor"
                 required
                 ></v-text-field>
 
-                <v-btn
-                :disabled="!valid"
-                color="success"
-                class="mr-4"
-                @click="validate"
-                >
-                Validar
-                </v-btn>
-
-                <v-btn
-                color="error"
-                class="mr-4"
-                @click="reset"
-                >
-                Resetar
-                </v-btn>
+                <v-btn @click="validate" rounded color="deep-purple lighten-2" dark> Validar </v-btn>
 
             </v-form>
         </div>
@@ -92,7 +70,7 @@
                     v-for="item in desserts"
                     :key="item.name"
                     >
-                    <v-avatar class="mt-2" size ="34" color="red">
+                    <v-avatar color="deep-purple lighten-2" dark class="mt-2" size ="34">
                    
                     </v-avatar>
                     <td>{{ item.nome }}</td>
@@ -123,14 +101,9 @@ export default {
           },
         ],
       valid: true,
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
-      ],
-      email: '',
-      emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      rules: '',
+      Rules: [
+        v => !!v || 'Campo Inválido',
       ],
       select: null,
       items: [
@@ -145,12 +118,6 @@ export default {
     methods: {
       validate () {
         this.$refs.form.validate()
-      },
-      reset () {
-        this.$refs.form.reset()
-      },
-      resetValidation () {
-        this.$refs.form.resetValidation()
       },
     },
   }
