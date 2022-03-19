@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <AppBar/>
     <v-main>
       <router-view />
     </v-main>
@@ -7,8 +8,13 @@
 </template>
 
 <script>
+import AppBar from './components/AppBar.vue'
 export default {
   name: 'App',
+
+  components:{
+    AppBar
+  },
 
   data: () => ({
     //
