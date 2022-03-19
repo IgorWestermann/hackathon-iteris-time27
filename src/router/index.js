@@ -1,6 +1,7 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import HomePage from '../views/HomePage.vue';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import HomePage from '../views/HomePage.vue'
+import ProductsPage from '../views/ProductsPage.vue'
 
 Vue.use(VueRouter);
 
@@ -10,17 +11,17 @@ const routes = [
     name: 'HomePage',
     component: HomePage,
   },
-  // {
-  //   path: '/',
-  //   name: 'ProdutosView',
-  //   component: HomeView,
-  // },
+  {
+    path: '/produtos',
+    name: 'ProductsPage',
+    component: ProductsPage
+  },
   // {
   //   path: '/',
   //   name: 'VendedorView',
-  //   component: HomeView,
+  //   component: HomePage
   // },
-];
+]
 
 const router = new VueRouter({
   mode: 'history',
