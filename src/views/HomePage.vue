@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="mt-16">
     <h2 class="text-center mb-6 page-title">Olá, seja bem-vindo!</h2>
     <p class="text-center mb-6">
       Encontre ou seja um vendedor ovos de páscoa artesanais nos estados do
