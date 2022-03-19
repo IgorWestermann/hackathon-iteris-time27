@@ -1,7 +1,10 @@
 <template>
   <v-container>
     <h2 class="text-center mb-6 page-title">Olá, seja bem-vindo!</h2>
-
+    <p class="text-center mb-6">
+      Encontre ou seja um vendedor ovos de páscoa artesanais nos estados do
+      Acre, Amapá ou Amazonas
+    </p>
     <div class="home-img mb-6">
       <img class="home-img" src="../../src/assets/home-img.webp" alt="" />
     </div>
@@ -28,7 +31,8 @@ export default {
 <style scoped>
 .home-buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px;
 }
 
 .home-buttons a {
