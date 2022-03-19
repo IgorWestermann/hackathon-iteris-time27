@@ -10,7 +10,7 @@
         ></v-text-field>
 
         <v-text-field class="ml-2 mr-2" 
-          v-model="email"
+          type="password"
           :rules="emailRules"
           label="Senha"
         ></v-text-field>
@@ -19,7 +19,7 @@
           <v-btn color="success" class="mr-4 ml-2" @click="validate"> Login </v-btn>
         </router-link>
 
-        <router-link to="/cadastro">
+        <router-link to="/registervendor">
           <v-btn color="" @click="resetValidation"> Cadastre-se </v-btn>
         </router-link>
       </v-form>
