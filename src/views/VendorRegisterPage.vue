@@ -8,7 +8,7 @@
         required
       >
       </v-text-field>
-      <v-text-field label="E-mail" color="deep-purple lighten-2">
+      <v-text-field type="email" label="E-mail" color="deep-purple lighten-2">
       </v-text-field>
       <v-text-field
         label="Telefone"
@@ -38,9 +38,10 @@
 
       <div class="register-page-btns">
         <v-btn rounded color="deep-purple lighten-2" dark> Cadastrar </v-btn>
-        <v-btn rounded color="deep-purple lighten-2 ml-2" dark>
-          Cancelar
+        <v-btn rounded color="deep-purple lighten-2" @click="reset" dark>
+          Limpar
         </v-btn>
+        <v-btn rounded color="deep-purple lighten-2" dark> Cancelar </v-btn>
       </div>
     </v-form>
   </v-container>
@@ -55,16 +56,21 @@ export default {
       items: ['Manaus - AM', 'Rio Branco - AC', 'Macapá- AP'],
     };
   },
+  methods: {
+    reset() {
+      this.$refs.form.reset();
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style>
 .page-title {
   color: #9575cd;
 }
 
 .register-page-btns {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 </style>

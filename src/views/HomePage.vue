@@ -1,12 +1,12 @@
 <template>
   <v-container>
-    <h2 class="text-center mb-6">Olá, seja bem-vindo!</h2>
+    <h2 class="text-center mb-6 page-title">Olá, seja bem-vindo!</h2>
 
     <div class="home-img mb-6">
       <img class="home-img" src="../../src/assets/home-img.webp" alt="" />
     </div>
 
-    <h3 class="text-center mb-6">Escolha uma opção:</h3>
+    <h3 class="text-center mb-6 page-title">Escolha uma opção:</h3>
 
     <div class="text-center home-buttons">
       <router-link to="/produtos">
