@@ -1,16 +1,16 @@
 <template>
   <v-container>
     <AppBar />
-    <RegionButtons />
+    <ProductList />
   </v-container>
 </template>
 
 <script>
-import RegionButtons from "../components/RegionButtons.vue";
+import ProductList from "../components/ProductList.vue";
 import AppBar from '../components/AppBar.vue';
 export default {
 
-  components: { RegionButtons, AppBar },
+  components: { ProductList, AppBar },
 }
 </script>
 
