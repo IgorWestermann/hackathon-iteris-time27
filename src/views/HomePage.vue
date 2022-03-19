@@ -9,8 +9,10 @@
     <h3 class="text-center mb-6">Escolha uma opção:</h3>
 
     <div class="text-center home-buttons">
-      <v-btn rounded color="primary" dark> Sou cliente </v-btn>
-      <v-btn rounded color="primary" dark> Sou revendedor </v-btn>
+      <router-link to="/produtos">
+        <v-btn rounded color="deep-purple lighten-2" dark> Sou cliente </v-btn>
+      </router-link>
+      <v-btn rounded color="deep-purple lighten-2" dark> Sou vendedor </v-btn>
     </div>
   </v-container>
 </template>
@@ -25,6 +27,10 @@ export default {
 .home-buttons {
   display: flex;
   justify-content: space-around;
+}
+
+.home-buttons a {
+  text-decoration: none;
 }
 
 .home-img {
