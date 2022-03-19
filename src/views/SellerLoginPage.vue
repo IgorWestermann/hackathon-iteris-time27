@@ -16,11 +16,11 @@
         ></v-text-field>
 
         <router-link to="/">
-          <v-btn color="success" class="mr-4 ml-2" @click="validate"> Login </v-btn>
+          <v-btn rounded color="deep-purple lighten-2" class="mr-4 ml-2" dark @click="validate"> Login </v-btn>
         </router-link>
 
         <router-link to="/registervendor">
-          <v-btn color="" @click="resetValidation"> Cadastre-se </v-btn>
+          <v-btn rounded color="deep-purple lighten-2" dark @click="resetValidation"> Cadastre-se </v-btn>
         </router-link>
       </v-form>
 
