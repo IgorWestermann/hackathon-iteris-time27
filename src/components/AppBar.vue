@@ -1,23 +1,20 @@
 <template>
-  <v-container >
+  <v-container class="app-bar">
     <v-bottom-navigation v-model="value" fixed app color="#52E4D5">
-      <v-btn value="recent">
-        <span>Home</span>
-
-        <v-icon>mdi-home</v-icon>
-      </v-btn>
-
-      <v-btn value="favorites">
+      <router-link to="/produtos">
+        <v-btn value="recent">
         <span>Clientes</span>
-
         <v-icon>mdi-account</v-icon>
-      </v-btn>
+        </v-btn>
+      </router-link>
 
-      <v-btn value="nearby">
-        <span>Vendedores</span>
+      <router-link to="/vendedor">
+        <v-btn value="nearby">
+          <span>Vendedores</span>
+          <v-icon>mdi-map-marker</v-icon>
+        </v-btn>
+      </router-link>
 
-        <v-icon>mdi-map-marker</v-icon>
-      </v-btn>
     </v-bottom-navigation>
   </v-container>
 </template>
@@ -25,9 +22,12 @@
 <script>
 export default {
   name: "AppBar",
-  data: () => ({ value: 'recent' }),
+  data: () => ({ value: "recent" }),
 };
 </script>
 
 <style scoped>
+.app-bar a{
+  text-decoration: none;
+}
 </style>
