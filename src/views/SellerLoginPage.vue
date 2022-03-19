@@ -11,7 +11,6 @@
 
         <v-text-field class="ml-2 mr-2" 
           type="password"
-          :rules="emailRules"
           label="Senha"
         ></v-text-field>
 
