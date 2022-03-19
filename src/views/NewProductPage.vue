@@ -84,11 +84,24 @@
 
         <div class="meus-produtos">
             <h2 class="mb-5 mt-8">Meus Produtos</h2>
-            <v-data-table
-                :headers="headers"
-                :items="desserts"
-                class="elevation-1"
-            ></v-data-table>
+            <v-simple-table>
+                <template v-slot:default>
+                
+                <tbody>
+                    <tr
+                    v-for="item in desserts"
+                    :key="item.name"
+                    >
+                    <v-avatar class="mt-2" size ="34" color="red">
+                   
+                    </v-avatar>
+                    <td>{{ item.nome }}</td>
+                    <td>{{ item.preco }}</td>
+                    <td>{{ item.sabor }}</td>
+                    </tr>
+                </tbody>
+                </template>
+            </v-simple-table>
         </div>
     </v-container>
 </template>
@@ -97,9 +110,19 @@
 export default {
     name: 'NewProductPage',
    data: () => ({
-       
+        desserts: [
+          {
+            nome: 'Ovo1',
+            preco: 'R$50,00',
+            sabor: 'chocolate ao leite',
+          },
+          {
+            nome: 'Ovo2',
+            preco: 'R$70,00',
+            sabor: 'chocolate branco',
+          },
+        ],
       valid: true,
-      name: '',
       nameRules: [
         v => !!v || 'Name is required',
         v => (v && v.length <= 10) || 'Name must be less than 10 characters',
