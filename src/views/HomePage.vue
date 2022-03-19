@@ -10,7 +10,9 @@
 
     <div class="text-center home-buttons">
       <v-btn rounded color="primary" dark> Sou cliente </v-btn>
-      <v-btn rounded color="primary" dark> Sou revendedor </v-btn>
+      <router-link to="/vendedor">
+        <v-btn rounded color="primary" dark> Sou revendedor </v-btn>
+      </router-link>
     </div>
   </v-container>
 </template>
